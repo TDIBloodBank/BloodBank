@@ -1,0 +1,91 @@
+create database BloodBank
+use BloodBank
+
+create table Nurse
+(
+id int primary key ,
+firstname varchar(30),
+lastname varchar(30),
+password varchar(30),
+)
+
+
+create table Hospital
+(
+hosid int primary key,
+nom varchar(50),
+ville varchar(50),
+phone varchar (30),
+adress varchar (30)
+)
+
+alter table hospital add phone varchar (30)
+alter table hospital add adress varchar (30)
+
+
+create table Commande
+(
+NumCom int primary key,
+DateCom datetime,
+hosid int foreign key references Hospital (hosid)
+)
+
+
+
+select * from donor
+
+create table DetailCom
+(
+NumCom int foreign key references Commande(NumCom),
+Bloodid int foreign key references labo(Bloodid),
+Qte int,
+primary key(numcom,Bloodid)
+)
+
+
+create table donor
+(
+DonorId int primary key,
+firstname varchar(30),
+lastname varchar(30),
+cin varchar (12),
+datebirth datetime,
+age int ,
+phone varchar (20),
+city varchar (20),
+sex varchar (8),
+Adress varchar(30),
+Height int,
+Dweight int,
+diseases varchar (50),
+BloodGroup varchar(10),
+datedonation datetime,
+donotedBefor char(3),
+)
+
+drop table Labo
+drop table Blood
+
+create table Labo
+(
+bloodid int primary key,
+Donorid int foreign key references donor (donorid),
+Verf char(3),
+bloodGroup varchar (30),
+statu varchar (300),
+)
+
+
+create table Blood
+(
+BloodGroup  varchar(3) Primary key,
+pu float,
+qstock int
+)
+
+create table Detaildonor
+(
+ddid int primary key,
+dated datetime, 
+Donorid int foreign key references donor (donorid),
+)
