@@ -66,6 +66,7 @@ namespace Blood
         {
             if (textBox4.Text != "")
             {
+                //add Comment 1
                 i = int.Parse(textBox4.Text);
                 nudq.Maximum = i;
                 nudq.Value = 0;
