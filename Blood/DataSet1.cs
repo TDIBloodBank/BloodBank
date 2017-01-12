@@ -6,3 +6,10 @@
     {
     }
 }
+
+namespace Blood.DataSet1TableAdapters {
+    
+    
+    public partial class DetaildonorTableAdapter {
+    }
+}

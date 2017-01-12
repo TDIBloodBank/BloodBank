@@ -64,7 +64,10 @@ namespace Blood
 
         private void button6_Click(object sender, EventArgs e)
         {
-            lid.Text = "";
+            int i;
+            DataTable data = d.GetDataBy();
+            i = int.Parse(data.ToString());
+            lid.Text = ++i +"";
             tfname.Text = "";
             tlname.Text = "";
             tcin.Text = "";

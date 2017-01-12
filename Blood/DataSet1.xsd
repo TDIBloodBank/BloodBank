@@ -623,7 +623,17 @@ SELECT DonorId, firstname, lastname, cin, datebirth, age, phone, city, sex, Adre
               <Mapping SourceColumn="datedonation" DataSetColumn="datedonation" />
               <Mapping SourceColumn="donotedBefor" DataSetColumn="donotedBefor" />
             </Mappings>
-            <Sources />
+            <Sources>
+              <DbSource ConnectionRef="BloodBankConnectionString (Settings)" DbObjectType="Unknown" GenerateMethods="Get" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy" GetMethodModifier="Public" GetMethodName="GetDataBy" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="GetDataBy">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        MAX(DonorId)
+FROM            donor</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
           </TableAdapter>
         </Tables>
         <Sources />
