@@ -36,7 +36,7 @@ namespace Blood
 
         private void savedata_Click(object sender, EventArgs e)
         {
-            l.Insert(int.Parse(bid.Text) ,int.Parse(cbdid.Text) , cbver.Text ,cbbg.Text , tstatus.Text);
+            l.Insert(int.Parse(cbdid.Text) , cbver.Text ,cbbg.Text , tstatus.Text);
         }
     }
 }

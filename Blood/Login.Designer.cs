@@ -31,15 +31,15 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.BCon = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tp = new System.Windows.Forms.TextBox();
+            this.tu = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.bshow = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -49,17 +49,18 @@
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(225)))), ((int)(((byte)(214)))));
             this.panel1.Controls.Add(this.pictureBox4);
             this.panel1.Controls.Add(this.bshow);
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.linkLabel1);
             this.panel1.Controls.Add(this.BCon);
-            this.panel1.Controls.Add(this.textBox2);
-            this.panel1.Controls.Add(this.textBox1);
-            this.panel1.Location = new System.Drawing.Point(-1, 206);
+            this.panel1.Controls.Add(this.tp);
+            this.panel1.Controls.Add(this.tu);
+            this.panel1.Location = new System.Drawing.Point(-1, 207);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(370, 264);
+            this.panel1.Size = new System.Drawing.Size(370, 255);
             this.panel1.TabIndex = 56;
             // 
             // linkLabel1
@@ -68,7 +69,7 @@
             this.linkLabel1.AutoSize = true;
             this.linkLabel1.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel1.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(99)))), ((int)(((byte)(99)))));
-            this.linkLabel1.Location = new System.Drawing.Point(90, 183);
+            this.linkLabel1.Location = new System.Drawing.Point(90, 175);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(102, 14);
             this.linkLabel1.TabIndex = 59;
@@ -82,7 +83,7 @@
             this.BCon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BCon.Font = new System.Drawing.Font("Calibri Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BCon.ForeColor = System.Drawing.Color.White;
-            this.BCon.Location = new System.Drawing.Point(198, 174);
+            this.BCon.Location = new System.Drawing.Point(198, 166);
             this.BCon.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.BCon.Name = "BCon";
             this.BCon.Size = new System.Drawing.Size(70, 27);
@@ -92,82 +93,30 @@
             this.BCon.UseVisualStyleBackColor = false;
             this.BCon.Click += new System.EventHandler(this.BCon_Click_1);
             // 
-            // textBox2
+            // tp
             // 
-            this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(81)))), ((int)(((byte)(82)))));
-            this.textBox2.Location = new System.Drawing.Point(93, 106);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(140, 29);
-            this.textBox2.TabIndex = 57;
+            this.tp.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tp.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tp.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tp.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(81)))), ((int)(((byte)(82)))));
+            this.tp.Location = new System.Drawing.Point(93, 111);
+            this.tp.Multiline = true;
+            this.tp.Name = "tp";
+            this.tp.Size = new System.Drawing.Size(140, 29);
+            this.tp.TabIndex = 57;
+            this.tp.TextChanged += new System.EventHandler(this.tp_TextChanged_1);
             // 
-            // textBox1
+            // tu
             // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(81)))), ((int)(((byte)(82)))));
-            this.textBox1.Location = new System.Drawing.Point(93, 48);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(176, 29);
-            this.textBox1.TabIndex = 56;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::Blood.Properties.Resources._0e8f9366cb396a13485588c267750ddd;
-            this.pictureBox3.Location = new System.Drawing.Point(-1, -70);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(370, 279);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 57;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = global::Blood.Properties.Resources.blood_1;
-            this.pictureBox4.Location = new System.Drawing.Point(267, 0);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(105, 341);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 63;
-            this.pictureBox4.TabStop = false;
-            // 
-            // bshow
-            // 
-            this.bshow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.bshow.BackgroundImage = global::Blood.Properties.Resources.eye1;
-            this.bshow.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.bshow.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.bshow.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bshow.Location = new System.Drawing.Point(233, 106);
-            this.bshow.Name = "bshow";
-            this.bshow.Size = new System.Drawing.Size(27, 29);
-            this.bshow.TabIndex = 62;
-            this.bshow.UseVisualStyleBackColor = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::Blood.Properties.Resources._492455_user_31x36;
-            this.pictureBox2.Location = new System.Drawing.Point(62, 48);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(25, 29);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 61;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Blood.Properties.Resources._492456_unlocked_30x34;
-            this.pictureBox1.Location = new System.Drawing.Point(62, 106);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(25, 29);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 60;
-            this.pictureBox1.TabStop = false;
+            this.tu.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tu.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tu.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(81)))), ((int)(((byte)(82)))));
+            this.tu.Location = new System.Drawing.Point(93, 52);
+            this.tu.Multiline = true;
+            this.tu.Name = "tu";
+            this.tu.Size = new System.Drawing.Size(167, 29);
+            this.tu.TabIndex = 56;
             // 
             // label1
             // 
@@ -193,12 +142,67 @@
             this.label2.TabIndex = 59;
             this.label2.Text = "Create by : oussama marwan";
             // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::Blood.Properties.Resources._0e8f9366cb396a13485588c267750ddd;
+            this.pictureBox3.Location = new System.Drawing.Point(-1, -70);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(370, 279);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 57;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::Blood.Properties.Resources.b1;
+            this.pictureBox4.Location = new System.Drawing.Point(267, -8);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(105, 341);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 63;
+            this.pictureBox4.TabStop = false;
+            // 
+            // bshow
+            // 
+            this.bshow.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.bshow.BackgroundImage = global::Blood.Properties.Resources.eye1;
+            this.bshow.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.bshow.FlatAppearance.BorderColor = System.Drawing.Color.WhiteSmoke;
+            this.bshow.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bshow.Location = new System.Drawing.Point(231, 112);
+            this.bshow.Name = "bshow";
+            this.bshow.Size = new System.Drawing.Size(27, 29);
+            this.bshow.TabIndex = 62;
+            this.bshow.UseVisualStyleBackColor = false;
+            this.bshow.MouseDown += new System.Windows.Forms.MouseEventHandler(this.bshow_MouseDown);
+            this.bshow.MouseUp += new System.Windows.Forms.MouseEventHandler(this.bshow_MouseUp);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::Blood.Properties.Resources._492455_user_31x36;
+            this.pictureBox2.Location = new System.Drawing.Point(62, 52);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(25, 29);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 61;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Blood.Properties.Resources._492456_unlocked_30x34;
+            this.pictureBox1.Location = new System.Drawing.Point(62, 111);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(25, 29);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 60;
+            this.pictureBox1.TabStop = false;
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(369, 467);
+            this.ClientSize = new System.Drawing.Size(369, 458);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox3);
@@ -225,8 +229,8 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.Button BCon;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tp;
+        private System.Windows.Forms.TextBox tu;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;

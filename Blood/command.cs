@@ -18,7 +18,6 @@ namespace Blood
             InitializeComponent();
             panel12.Enabled = false;
         }
-        int i;
         private void command_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'dataSet1.Commande' table. You can move, or remove it, as needed.
@@ -40,50 +39,69 @@ namespace Blood
 
         private void button1_Click(object sender, EventArgs e)
         {
-
-            if (tcnum.Text != "")
-            {
-
-                panel12.Enabled = true;
-
-            }
+            //if (tcnum.Text != "")
+            //{
+                  panel12.Enabled = true;
+            //}
         }
 
         private void savedata_Click(object sender, EventArgs e)
         {
+            double d = 0,t=0;
             if (nudq.Value > 0)
             {
                 double montant = double.Parse(tprice.Text) * int.Parse(nudq.Value.ToString());
-                dataGridView1.Rows.Add(cbbg.Text, tprice.Text, nudq.Text, montant);
 
-                //total += montant;
-                //ttotal.Text = total.ToString();
+                foreach (DataGridViewRow r in dataGridView1.Rows)
+                {
+                    if (r.Cells[0].Value.ToString() == cbbg.Text)
+                    {
+                        d = double.Parse(r.Cells[2].Value.ToString()) + double.Parse(nudq.Value.ToString());
+                        r.Cells[2].Value = d;
+                        r.Cells[3].Value = d * double.Parse(tprice.Text);
+                        break;
+                    }
+                }
+                if(d==0)
+                    dataGridView1.Rows.Add(cbbg.Text, tprice.Text, nudq.Text, montant);
+
+                foreach (DataGridViewRow r in dataGridView1.Rows)
+                {
+                    t += double.Parse(r.Cells[3].Value.ToString());
+                }
+                ltotal.Text = t.ToString();
             }
-
         }
 
         private void cbbg_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (textBox4.Text != "")
-            {
-                //add Comment 1
-                i = int.Parse(textBox4.Text);
-                nudq.Maximum = i;
-                nudq.Value = 0;
 
-            }
+        }
+
+        private void nudq_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tprice_TextChanged(object sender, EventArgs e)
+        {
+            int i = 0;
+            i = int.Parse(textBox4.Text);
 
             foreach (DataGridViewRow r in dataGridView1.Rows)
             {
                 if (r.Cells[0].Value.ToString() == cbbg.Text)
                 {
-                    nudq.Maximum = int.Parse(textBox4.Text)  - int.Parse(r.Cells[2].Value.ToString());
+                    nudq.Maximum = i - int.Parse(r.Cells[2].Value.ToString());
+                    nudq.Value = 0;
+                    break;
+                }
+                else
+                {
+                    nudq.Maximum = i;
+                    nudq.Value = 0;
                 }
             }
-        }
-
-        private void nudq_ValueChanged(object sender, EventArgs e)
-        {
 
         }
     }

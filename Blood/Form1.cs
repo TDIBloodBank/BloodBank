@@ -90,5 +90,22 @@ namespace Blood
             stock s = new stock();
             call(s);
         }
+
+        private void donorh_Click(object sender, EventArgs e)
+        {
+            History h = new History();
+            call(h);
+        }
+
+        private void dinfo_Click(object sender, EventArgs e)
+        {
+            info i = new info();
+            call(i);
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

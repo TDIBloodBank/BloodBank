@@ -118,14 +118,14 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="B" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\B.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="eye1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\eye1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="blood 1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\blood 1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="eye" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\eye.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="givetolive" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\givetolive.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="492455_user_31x36" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\492455_user_31x36.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -133,8 +133,8 @@
   <data name="blood" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\blood.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="492456_unlocked_30x34" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\492456_unlocked_30x34.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="0e8f9366cb396a13485588c267750ddd" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\0e8f9366cb396a13485588c267750ddd.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="blood 2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\blood 2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -142,10 +142,22 @@
   <data name="492459_error_32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\492459_error_32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="givetolive" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\givetolive.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="256-256-58063dcbb6764fcf4850dd7b8cb493cf-nurse" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\256-256-58063dcbb6764fcf4850dd7b8cb493cf-nurse.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="0e8f9366cb396a13485588c267750ddd" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\0e8f9366cb396a13485588c267750ddd.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="eye" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\eye.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pack" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pack.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="blood 1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\blood 1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="492456_unlocked_30x34" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\492456_unlocked_30x34.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="b1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\b1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

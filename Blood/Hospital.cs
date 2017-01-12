@@ -21,12 +21,12 @@ namespace Blood
 
         private void savedata_Click(object sender, EventArgs e)
         {
-            h.Insert(int.Parse(thid.Text) ,thname.Text,tcity.Text,phone.Text,tadress.Text);
+            h.Insert(thname.Text.ToString(),tcity.Text.ToString(), phone.Text.ToString(), tadress.Text.ToString());
         }
 
         private void CLEAR_Click(object sender, EventArgs e)
         {
-            thid.Text="" ;
+            lid.Text="" ;
             thname.Text="";
             tcity.Text="";
             phone.Text="";

@@ -29,7 +29,8 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button6 = new System.Windows.Forms.Button();
+            this.dinfo = new System.Windows.Forms.Button();
+            this.donorh = new System.Windows.Forms.Button();
             this.Stock = new System.Windows.Forms.Button();
             this.bhos = new System.Windows.Forms.Button();
             this.Comm = new System.Windows.Forms.Button();
@@ -40,15 +41,22 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.lname = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
-            this.panel1.Controls.Add(this.button6);
+            this.panel1.Controls.Add(this.dinfo);
+            this.panel1.Controls.Add(this.donorh);
             this.panel1.Controls.Add(this.Stock);
             this.panel1.Controls.Add(this.bhos);
             this.panel1.Controls.Add(this.Comm);
@@ -59,19 +67,35 @@
             this.panel1.Size = new System.Drawing.Size(191, 865);
             this.panel1.TabIndex = 0;
             // 
-            // button6
+            // dinfo
             // 
-            this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
-            this.button6.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.ForeColor = System.Drawing.SystemColors.Control;
-            this.button6.Location = new System.Drawing.Point(2, 348);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(191, 47);
-            this.button6.TabIndex = 5;
-            this.button6.Text = "button6";
-            this.button6.UseVisualStyleBackColor = false;
+            this.dinfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
+            this.dinfo.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
+            this.dinfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.dinfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dinfo.ForeColor = System.Drawing.SystemColors.Control;
+            this.dinfo.Location = new System.Drawing.Point(0, 409);
+            this.dinfo.Name = "dinfo";
+            this.dinfo.Size = new System.Drawing.Size(191, 47);
+            this.dinfo.TabIndex = 6;
+            this.dinfo.Text = "Donor info";
+            this.dinfo.UseVisualStyleBackColor = false;
+            this.dinfo.Click += new System.EventHandler(this.dinfo_Click);
+            // 
+            // donorh
+            // 
+            this.donorh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
+            this.donorh.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
+            this.donorh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.donorh.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.donorh.ForeColor = System.Drawing.SystemColors.Control;
+            this.donorh.Location = new System.Drawing.Point(2, 348);
+            this.donorh.Name = "donorh";
+            this.donorh.Size = new System.Drawing.Size(191, 47);
+            this.donorh.TabIndex = 5;
+            this.donorh.Text = "Donor History";
+            this.donorh.UseVisualStyleBackColor = false;
+            this.donorh.Click += new System.EventHandler(this.donorh_Click);
             // 
             // Stock
             // 
@@ -159,6 +183,9 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Controls.Add(this.lname);
+            this.panel2.Controls.Add(this.pictureBox3);
+            this.panel2.Controls.Add(this.pictureBox2);
             this.panel2.Location = new System.Drawing.Point(190, -2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1419, 40);
@@ -196,6 +223,38 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::Blood.Properties.Resources._256_256_58063dcbb6764fcf4850dd7b8cb493cf_nurse;
+            this.pictureBox3.Location = new System.Drawing.Point(64, 3);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(48, 37);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 1;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::Blood.Properties.Resources._492459_error_32x32;
+            this.pictureBox2.Location = new System.Drawing.Point(1361, 3);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(26, 36);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 0;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
+            // lname
+            // 
+            this.lname.AutoSize = true;
+            this.lname.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lname.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(99)))), ((int)(((byte)(99)))));
+            this.lname.Location = new System.Drawing.Point(118, 14);
+            this.lname.Name = "lname";
+            this.lname.Size = new System.Drawing.Size(21, 25);
+            this.lname.TabIndex = 62;
+            this.lname.Text = "-";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -208,9 +267,13 @@
             this.Name = "Form1";
             this.Text = "Form1";
             this.panel1.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -221,7 +284,7 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button donorh;
         private System.Windows.Forms.Button Stock;
         private System.Windows.Forms.Button bhos;
         private System.Windows.Forms.Button Comm;
@@ -229,6 +292,10 @@
         private System.Windows.Forms.Button bajout;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button dinfo;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label lname;
     }
 }
 

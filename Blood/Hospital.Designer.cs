@@ -29,12 +29,13 @@
         private void InitializeComponent()
         {
             this.panel7 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lid = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
-            this.thid = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.phone = new System.Windows.Forms.MaskedTextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -45,7 +46,6 @@
             this.thname = new System.Windows.Forms.TextBox();
             this.savedata = new System.Windows.Forms.Button();
             this.CLEAR = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
@@ -63,6 +63,14 @@
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(10, 393);
             this.panel7.TabIndex = 19;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(10, 393);
+            this.panel2.TabIndex = 20;
             // 
             // panel3
             // 
@@ -94,8 +102,8 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(225)))), ((int)(((byte)(214)))));
+            this.panel1.Controls.Add(this.lid);
             this.panel1.Controls.Add(this.label16);
-            this.panel1.Controls.Add(this.thid);
             this.panel1.Controls.Add(this.label9);
             this.panel1.Controls.Add(this.phone);
             this.panel1.Controls.Add(this.label7);
@@ -110,6 +118,17 @@
             this.panel1.Size = new System.Drawing.Size(1109, 364);
             this.panel1.TabIndex = 17;
             // 
+            // lid
+            // 
+            this.lid.AutoSize = true;
+            this.lid.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lid.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(99)))), ((int)(((byte)(99)))));
+            this.lid.Location = new System.Drawing.Point(189, 67);
+            this.lid.Name = "lid";
+            this.lid.Size = new System.Drawing.Size(21, 25);
+            this.lid.TabIndex = 52;
+            this.lid.Text = "-";
+            // 
             // label16
             // 
             this.label16.AutoSize = true;
@@ -119,16 +138,6 @@
             this.label16.Size = new System.Drawing.Size(31, 24);
             this.label16.TabIndex = 33;
             this.label16.Text = "ID";
-            // 
-            // thid
-            // 
-            this.thid.BackColor = System.Drawing.Color.White;
-            this.thid.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.thid.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(99)))), ((int)(((byte)(99)))));
-            this.thid.Location = new System.Drawing.Point(190, 66);
-            this.thid.Name = "thid";
-            this.thid.Size = new System.Drawing.Size(292, 26);
-            this.thid.TabIndex = 32;
             // 
             // label9
             // 
@@ -239,14 +248,6 @@
             this.CLEAR.UseVisualStyleBackColor = false;
             this.CLEAR.Click += new System.EventHandler(this.CLEAR_Click);
             // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(10, 393);
-            this.panel2.TabIndex = 20;
-            // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
@@ -316,7 +317,6 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.TextBox thid;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.MaskedTextBox phone;
         private System.Windows.Forms.Label label7;
@@ -332,5 +332,6 @@
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Panel panel9;
+        private System.Windows.Forms.Label lid;
     }
 }

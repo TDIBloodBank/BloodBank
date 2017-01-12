@@ -34,6 +34,13 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.ltotal = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.qu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.man = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
@@ -44,9 +51,9 @@
             this.hospitalBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataSet1 = new Blood.DataSet1();
             this.label12 = new System.Windows.Forms.Label();
-            this.tcnum = new System.Windows.Forms.TextBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label20 = new System.Windows.Forms.Label();
+            this.commandeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.hospitalTableAdapter = new Blood.DataSet1TableAdapters.HospitalTableAdapter();
             this.panel9 = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
@@ -70,25 +77,20 @@
             this.panel15 = new System.Windows.Forms.Panel();
             this.panel16 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
-            this.commandeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.commandeTableAdapter = new Blood.DataSet1TableAdapters.CommandeTableAdapter();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pu = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.qu = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.man = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lid = new System.Windows.Forms.Label();
             this.panel4.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel6.SuspendLayout();
             this.panel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.hospitalBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.commandeBindingSource)).BeginInit();
             this.panel11.SuspendLayout();
             this.panel12.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudq)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bloodBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.commandeBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel7
@@ -129,12 +131,75 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(225)))), ((int)(((byte)(214)))));
+            this.panel1.Controls.Add(this.ltotal);
+            this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.dataGridView1);
             this.panel1.Location = new System.Drawing.Point(103, 447);
             this.panel1.Margin = new System.Windows.Forms.Padding(6);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1176, 290);
             this.panel1.TabIndex = 13;
+            // 
+            // ltotal
+            // 
+            this.ltotal.AutoSize = true;
+            this.ltotal.Font = new System.Drawing.Font("Century Gothic", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ltotal.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.ltotal.Location = new System.Drawing.Point(982, 235);
+            this.ltotal.Name = "ltotal";
+            this.ltotal.Size = new System.Drawing.Size(80, 40);
+            this.ltotal.TabIndex = 39;
+            this.ltotal.Text = "0Dh";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(99)))), ((int)(((byte)(99)))));
+            this.label1.Location = new System.Drawing.Point(985, 215);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(58, 24);
+            this.label1.TabIndex = 36;
+            this.label1.Text = "Total";
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.id,
+            this.pu,
+            this.qu,
+            this.man});
+            this.dataGridView1.Location = new System.Drawing.Point(134, 24);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(842, 251);
+            this.dataGridView1.TabIndex = 0;
+            // 
+            // id
+            // 
+            this.id.FillWeight = 200F;
+            this.id.HeaderText = "Blood Group";
+            this.id.Name = "id";
+            this.id.Width = 200;
+            // 
+            // pu
+            // 
+            this.pu.HeaderText = "Price";
+            this.pu.Name = "pu";
+            this.pu.Width = 200;
+            // 
+            // qu
+            // 
+            this.qu.HeaderText = "Quantity";
+            this.qu.Name = "qu";
+            this.qu.Width = 200;
+            // 
+            // man
+            // 
+            this.man.HeaderText = "Amount";
+            this.man.Name = "man";
+            this.man.Width = 200;
             // 
             // panel2
             // 
@@ -174,10 +239,10 @@
             // panel8
             // 
             this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(225)))), ((int)(((byte)(214)))));
+            this.panel8.Controls.Add(this.lid);
             this.panel8.Controls.Add(this.label11);
             this.panel8.Controls.Add(this.comboBox1);
             this.panel8.Controls.Add(this.label12);
-            this.panel8.Controls.Add(this.tcnum);
             this.panel8.Controls.Add(this.dateTimePicker1);
             this.panel8.Controls.Add(this.label20);
             this.panel8.Location = new System.Drawing.Point(103, 60);
@@ -229,16 +294,6 @@
             this.label12.TabIndex = 33;
             this.label12.Text = "Num";
             // 
-            // tcnum
-            // 
-            this.tcnum.BackColor = System.Drawing.Color.White;
-            this.tcnum.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tcnum.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(99)))), ((int)(((byte)(99)))));
-            this.tcnum.Location = new System.Drawing.Point(123, 53);
-            this.tcnum.Name = "tcnum";
-            this.tcnum.Size = new System.Drawing.Size(290, 26);
-            this.tcnum.TabIndex = 32;
-            // 
             // dateTimePicker1
             // 
             this.dateTimePicker1.Location = new System.Drawing.Point(123, 187);
@@ -255,6 +310,11 @@
             this.label20.Size = new System.Drawing.Size(61, 24);
             this.label20.TabIndex = 5;
             this.label20.Text = "Date";
+            // 
+            // commandeBindingSource
+            // 
+            this.commandeBindingSource.DataMember = "Commande";
+            this.commandeBindingSource.DataSource = this.dataSet1;
             // 
             // hospitalTableAdapter
             // 
@@ -341,9 +401,9 @@
             this.label19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(99)))), ((int)(((byte)(99)))));
             this.label19.Location = new System.Drawing.Point(63, 131);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(159, 24);
+            this.label19.Size = new System.Drawing.Size(156, 24);
             this.label19.TabIndex = 33;
-            this.label19.Text = "Quentite stock";
+            this.label19.Text = "Quantity stock";
             // 
             // textBox4
             // 
@@ -370,9 +430,9 @@
             this.label18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(99)))), ((int)(((byte)(99)))));
             this.label18.Location = new System.Drawing.Point(314, 131);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(99, 24);
+            this.label18.Size = new System.Drawing.Size(96, 24);
             this.label18.TabIndex = 31;
-            this.label18.Text = "Quentite";
+            this.label18.Text = "Quantity";
             // 
             // label15
             // 
@@ -396,6 +456,7 @@
             this.tprice.Name = "tprice";
             this.tprice.Size = new System.Drawing.Size(173, 26);
             this.tprice.TabIndex = 28;
+            this.tprice.TextChanged += new System.EventHandler(this.tprice_TextChanged);
             // 
             // label14
             // 
@@ -428,7 +489,7 @@
             // panel13
             // 
             this.panel13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
-            this.panel13.Location = new System.Drawing.Point(916, 382);
+            this.panel13.Location = new System.Drawing.Point(917, 382);
             this.panel13.Name = "panel13";
             this.panel13.Size = new System.Drawing.Size(220, 7);
             this.panel13.TabIndex = 27;
@@ -485,53 +546,20 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // commandeBindingSource
-            // 
-            this.commandeBindingSource.DataMember = "Commande";
-            this.commandeBindingSource.DataSource = this.dataSet1;
-            // 
             // commandeTableAdapter
             // 
             this.commandeTableAdapter.ClearBeforeFill = true;
             // 
-            // dataGridView1
+            // lid
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.id,
-            this.pu,
-            this.qu,
-            this.man});
-            this.dataGridView1.Location = new System.Drawing.Point(32, 24);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(853, 225);
-            this.dataGridView1.TabIndex = 0;
-            // 
-            // id
-            // 
-            this.id.FillWeight = 200F;
-            this.id.HeaderText = "Blood Group";
-            this.id.Name = "id";
-            this.id.Width = 200;
-            // 
-            // pu
-            // 
-            this.pu.HeaderText = "Price";
-            this.pu.Name = "pu";
-            this.pu.Width = 200;
-            // 
-            // qu
-            // 
-            this.qu.HeaderText = "Quantity";
-            this.qu.Name = "qu";
-            this.qu.Width = 200;
-            // 
-            // man
-            // 
-            this.man.HeaderText = "Amount";
-            this.man.Name = "man";
-            this.man.Width = 200;
+            this.lid.AutoSize = true;
+            this.lid.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lid.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(99)))), ((int)(((byte)(99)))));
+            this.lid.Location = new System.Drawing.Point(118, 60);
+            this.lid.Name = "lid";
+            this.lid.Size = new System.Drawing.Size(21, 25);
+            this.lid.TabIndex = 53;
+            this.lid.Text = "-";
             // 
             // command
             // 
@@ -565,20 +593,21 @@
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.hospitalBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.commandeBindingSource)).EndInit();
             this.panel11.ResumeLayout(false);
             this.panel11.PerformLayout();
             this.panel12.ResumeLayout(false);
             this.panel12.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudq)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bloodBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.commandeBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -598,7 +627,6 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox tcnum;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label20;
         private DataSet1 dataSet1;
@@ -633,5 +661,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn pu;
         private System.Windows.Forms.DataGridViewTextBoxColumn qu;
         private System.Windows.Forms.DataGridViewTextBoxColumn man;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label ltotal;
+        private System.Windows.Forms.Label lid;
     }
 }

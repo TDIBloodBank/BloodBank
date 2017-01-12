@@ -1,4 +1,5 @@
 create database BloodBank
+
 use BloodBank
 
 create table Nurse
@@ -19,9 +20,7 @@ phone varchar (30),
 adress varchar (30)
 )
 
-alter table hospital add phone varchar (30)
 alter table hospital add adress varchar (30)
-
 
 create table Commande
 (
@@ -30,17 +29,13 @@ DateCom datetime,
 hosid int foreign key references Hospital (hosid)
 )
 
-
-
-select * from donor
-
-create table DetailCom
+create table Blood
 (
-NumCom int foreign key references Commande(NumCom),
-Bloodid int foreign key references labo(Bloodid),
-Qte int,
-primary key(numcom,Bloodid)
+BloodGroup  char(3) Primary key,
+pu float,
+qstock int
 )
+
 
 
 create table donor
@@ -58,30 +53,20 @@ Adress varchar(30),
 Height int,
 Dweight int,
 diseases varchar (50),
-BloodGroup varchar(10),
+BloodGroup char (3)foreign key references blood (bloodgroup),
 datedonation datetime,
 donotedBefor char(3),
 )
-
-drop table Labo
-drop table Blood
 
 create table Labo
 (
 bloodid int primary key,
 Donorid int foreign key references donor (donorid),
 Verf char(3),
-bloodGroup varchar (30),
+BloodGroup char (3)foreign key references blood (bloodgroup),
 statu varchar (300),
 )
 
-
-create table Blood
-(
-BloodGroup  varchar(3) Primary key,
-pu float,
-qstock int
-)
 
 create table Detaildonor
 (
@@ -89,3 +74,22 @@ ddid int primary key,
 dated datetime, 
 Donorid int foreign key references donor (donorid),
 )
+
+create table DetailCom
+(
+NumCom int foreign key references Commande(NumCom),
+Bloodid int foreign key references labo(Bloodid),
+Qte int,
+primary key(numcom,Bloodid)
+)
+
+
+
+insert into blood values ('A-',600,0)
+insert into blood values ('A+',700,68)
+insert into blood values ('AB-',650,90)
+insert into blood values ('AB+',730,71)
+insert into blood values ('B-',620,59)
+insert into blood values ('B+',550,1)
+insert into blood values ('O-',800,80)
+insert into blood values ('O+',880,53)

@@ -16,10 +16,11 @@ namespace Blood
     {
         BindingSource b = new BindingSource();
         donorTableAdapter d = new donorTableAdapter();
+        DetaildonorTableAdapter dd = new DetaildonorTableAdapter();
 
         public void actu()
         {
-            tdid.DataBindings.Add("Text", b, "DonorId");
+            lid.DataBindings.Add("Text", b, "DonorId");
             tfname.DataBindings.Add("Text", b, "firstname");
             tlname.DataBindings.Add("Text", b, "lastname");
             tcin.DataBindings.Add("Text", b, "cin");
@@ -53,14 +54,17 @@ namespace Blood
 
         private void savedata_Click(object sender, EventArgs e)
         {
-            d.Insert(int.Parse(tdid.Text), tfname.Text, tlname.Text, tcin.Text, dob.Value, int.Parse(age.Text), phone.Text, tcity.Text, sex.Text, tadress.Text, int.Parse(cm.Text), int.Parse(kg.Text), tdis.Text, cbbg.Text, dod.Value, cbdb.Text);
+            d.Insert(tfname.Text, tlname.Text, tcin.Text, dob.Value, int.Parse(age.Text), phone.Text, tcity.Text, sex.Text, tadress.Text, int.Parse(cm.Text), int.Parse(kg.Text), tdis.Text, cbbg.Text, dod.Value, cbdb.Text);
+            dd.Insert(dod.Value, int.Parse(lid.Text.ToString()));
+            
             actu();
+
 
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
-            tdid.Text = "";
+            lid.Text = "";
             tfname.Text = "";
             tlname.Text = "";
             tcin.Text = "";

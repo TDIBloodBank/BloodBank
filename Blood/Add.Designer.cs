@@ -32,7 +32,6 @@
             this.label17 = new System.Windows.Forms.Label();
             this.sex = new System.Windows.Forms.ComboBox();
             this.label16 = new System.Windows.Forms.Label();
-            this.tdid = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.phone = new System.Windows.Forms.MaskedTextBox();
             this.dob = new System.Windows.Forms.DateTimePicker();
@@ -77,6 +76,7 @@
             this.panel8 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.lid = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.age)).BeginInit();
             this.panel2.SuspendLayout();
@@ -89,10 +89,10 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(225)))), ((int)(((byte)(214)))));
+            this.panel1.Controls.Add(this.lid);
             this.panel1.Controls.Add(this.label17);
             this.panel1.Controls.Add(this.sex);
             this.panel1.Controls.Add(this.label16);
-            this.panel1.Controls.Add(this.tdid);
             this.panel1.Controls.Add(this.label9);
             this.panel1.Controls.Add(this.phone);
             this.panel1.Controls.Add(this.dob);
@@ -148,16 +148,6 @@
             this.label16.Size = new System.Drawing.Size(31, 24);
             this.label16.TabIndex = 33;
             this.label16.Text = "ID";
-            // 
-            // tdid
-            // 
-            this.tdid.BackColor = System.Drawing.Color.White;
-            this.tdid.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tdid.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(99)))), ((int)(((byte)(99)))));
-            this.tdid.Location = new System.Drawing.Point(39, 34);
-            this.tdid.Name = "tdid";
-            this.tdid.Size = new System.Drawing.Size(292, 26);
-            this.tdid.TabIndex = 32;
             // 
             // label9
             // 
@@ -641,6 +631,17 @@
             this.panel7.Size = new System.Drawing.Size(10, 320);
             this.panel7.TabIndex = 12;
             // 
+            // lid
+            // 
+            this.lid.AutoSize = true;
+            this.lid.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lid.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(99)))), ((int)(((byte)(99)))));
+            this.lid.Location = new System.Drawing.Point(36, 35);
+            this.lid.Name = "lid";
+            this.lid.Size = new System.Drawing.Size(21, 25);
+            this.lid.TabIndex = 53;
+            this.lid.Text = "-";
+            // 
             // Add
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 24F);
@@ -719,7 +720,6 @@
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.TextBox tdid;
         private System.Windows.Forms.Button blast;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button savedata;
@@ -733,5 +733,6 @@
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Label lid;
     }
 }
