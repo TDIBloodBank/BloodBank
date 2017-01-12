@@ -50,7 +50,6 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.hospitalBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataSet1 = new Blood.DataSet1();
-            this.label12 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label20 = new System.Windows.Forms.Label();
             this.commandeBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -79,6 +78,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.commandeTableAdapter = new Blood.DataSet1TableAdapters.CommandeTableAdapter();
             this.lid = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel4.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -239,10 +239,10 @@
             // panel8
             // 
             this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(225)))), ((int)(((byte)(214)))));
+            this.panel8.Controls.Add(this.label2);
             this.panel8.Controls.Add(this.lid);
             this.panel8.Controls.Add(this.label11);
             this.panel8.Controls.Add(this.comboBox1);
-            this.panel8.Controls.Add(this.label12);
             this.panel8.Controls.Add(this.dateTimePicker1);
             this.panel8.Controls.Add(this.label20);
             this.panel8.Location = new System.Drawing.Point(103, 60);
@@ -255,7 +255,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(99)))), ((int)(((byte)(99)))));
-            this.label11.Location = new System.Drawing.Point(119, 92);
+            this.label11.Location = new System.Drawing.Point(119, 87);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(116, 24);
             this.label11.TabIndex = 35;
@@ -268,7 +268,7 @@
             this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(99)))), ((int)(((byte)(99)))));
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(123, 119);
+            this.comboBox1.Location = new System.Drawing.Point(123, 114);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(290, 32);
             this.comboBox1.TabIndex = 34;
@@ -283,16 +283,6 @@
             // 
             this.dataSet1.DataSetName = "DataSet1";
             this.dataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(99)))), ((int)(((byte)(99)))));
-            this.label12.Location = new System.Drawing.Point(119, 26);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(60, 24);
-            this.label12.TabIndex = 33;
-            this.label12.Text = "Num";
             // 
             // dateTimePicker1
             // 
@@ -553,13 +543,24 @@
             // lid
             // 
             this.lid.AutoSize = true;
-            this.lid.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lid.Font = new System.Drawing.Font("Century Gothic", 40F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lid.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(99)))), ((int)(((byte)(99)))));
-            this.lid.Location = new System.Drawing.Point(118, 60);
+            this.lid.Location = new System.Drawing.Point(147, 9);
             this.lid.Name = "lid";
-            this.lid.Size = new System.Drawing.Size(21, 25);
-            this.lid.TabIndex = 53;
-            this.lid.Text = "-";
+            this.lid.Size = new System.Drawing.Size(58, 64);
+            this.lid.TabIndex = 55;
+            this.lid.Text = "6";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label2.Location = new System.Drawing.Point(119, 48);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(41, 19);
+            this.label2.TabIndex = 56;
+            this.label2.Text = "Num";
             // 
             // command
             // 
@@ -626,7 +627,6 @@
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Label label12;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label20;
         private DataSet1 dataSet1;
@@ -663,6 +663,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn man;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label ltotal;
+        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lid;
     }
 }

@@ -17,6 +17,13 @@ namespace Blood
         public Hospital()
         {
             InitializeComponent();
+            FillIdsection();
+        }
+        private void FillIdsection()
+        {
+            DataTable dt = h.GetDataBy();
+            int i = int.Parse(dt.Rows[0]["MAXID"].ToString()) + 1;
+            lid.Text = i.ToString();
         }
 
         private void savedata_Click(object sender, EventArgs e)
@@ -26,7 +33,7 @@ namespace Blood
 
         private void CLEAR_Click(object sender, EventArgs e)
         {
-            lid.Text="" ;
+            FillIdsection();
             thname.Text="";
             tcity.Text="";
             phone.Text="";

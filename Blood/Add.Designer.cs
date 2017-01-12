@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lid = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.sex = new System.Windows.Forms.ComboBox();
-            this.label16 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.phone = new System.Windows.Forms.MaskedTextBox();
             this.dob = new System.Windows.Forms.DateTimePicker();
@@ -76,7 +76,7 @@
             this.panel8 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.lid = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.age)).BeginInit();
             this.panel2.SuspendLayout();
@@ -89,10 +89,10 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(225)))), ((int)(((byte)(214)))));
+            this.panel1.Controls.Add(this.label19);
             this.panel1.Controls.Add(this.lid);
             this.panel1.Controls.Add(this.label17);
             this.panel1.Controls.Add(this.sex);
-            this.panel1.Controls.Add(this.label16);
             this.panel1.Controls.Add(this.label9);
             this.panel1.Controls.Add(this.phone);
             this.panel1.Controls.Add(this.dob);
@@ -116,6 +116,17 @@
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // lid
+            // 
+            this.lid.AutoSize = true;
+            this.lid.Font = new System.Drawing.Font("Century Gothic", 40F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lid.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(99)))), ((int)(((byte)(99)))));
+            this.lid.Location = new System.Drawing.Point(54, 4);
+            this.lid.Name = "lid";
+            this.lid.Size = new System.Drawing.Size(58, 64);
+            this.lid.TabIndex = 53;
+            this.lid.Text = "6";
+            // 
             // label17
             // 
             this.label17.AutoSize = true;
@@ -138,16 +149,6 @@
             this.sex.Name = "sex";
             this.sex.Size = new System.Drawing.Size(292, 32);
             this.sex.TabIndex = 34;
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(99)))), ((int)(((byte)(99)))));
-            this.label16.Location = new System.Drawing.Point(35, 7);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(31, 24);
-            this.label16.TabIndex = 33;
-            this.label16.Text = "ID";
             // 
             // label9
             // 
@@ -631,16 +632,14 @@
             this.panel7.Size = new System.Drawing.Size(10, 320);
             this.panel7.TabIndex = 12;
             // 
-            // lid
+            // label19
             // 
-            this.lid.AutoSize = true;
-            this.lid.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lid.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(99)))), ((int)(((byte)(99)))));
-            this.lid.Location = new System.Drawing.Point(36, 35);
-            this.lid.Name = "lid";
-            this.lid.Size = new System.Drawing.Size(21, 25);
-            this.lid.TabIndex = 53;
-            this.lid.Text = "-";
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(35, 36);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(31, 24);
+            this.label19.TabIndex = 54;
+            this.label19.Text = "ID";
             // 
             // Add
             // 
@@ -719,7 +718,6 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Button blast;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button savedata;
@@ -734,5 +732,6 @@
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Label lid;
+        private System.Windows.Forms.Label label19;
     }
 }

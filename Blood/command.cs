@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Blood.DataSet1TableAdapters;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,7 +18,10 @@ namespace Blood
         {
             InitializeComponent();
             panel12.Enabled = false;
+            FillIdsection();
         }
+
+        CommandeTableAdapter c = new CommandeTableAdapter();
         private void command_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'dataSet1.Commande' table. You can move, or remove it, as needed.
@@ -29,6 +33,13 @@ namespace Blood
             // TODO: This line of code loads data into the 'dataSet1.Hospital' table. You can move, or remove it, as needed.
             this.hospitalTableAdapter.Fill(this.dataSet1.Hospital);
 
+        }
+
+        private void FillIdsection()
+        {
+            DataTable dt = c.GetDataBy();
+            int i = int.Parse(dt.Rows[0]["MAXID"].ToString()) + 1;
+            lid.Text = i.ToString();
         }
 
         private void textBox4_TextChanged(object sender, EventArgs e)

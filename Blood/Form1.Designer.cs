@@ -38,23 +38,25 @@
             this.bajout = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.lname = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.lname = new System.Windows.Forms.Label();
+            this.Dashdoard = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
+            this.panel1.Controls.Add(this.Dashdoard);
             this.panel1.Controls.Add(this.dinfo);
             this.panel1.Controls.Add(this.donorh);
             this.panel1.Controls.Add(this.Stock);
@@ -191,6 +193,38 @@
             this.panel2.Size = new System.Drawing.Size(1419, 40);
             this.panel2.TabIndex = 1;
             // 
+            // lname
+            // 
+            this.lname.AutoSize = true;
+            this.lname.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lname.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(99)))), ((int)(((byte)(99)))));
+            this.lname.Location = new System.Drawing.Point(69, 14);
+            this.lname.Name = "lname";
+            this.lname.Size = new System.Drawing.Size(21, 25);
+            this.lname.TabIndex = 62;
+            this.lname.Text = "-";
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::Blood.Properties.Resources._256_256_58063dcbb6764fcf4850dd7b8cb493cf_nurse;
+            this.pictureBox3.Location = new System.Drawing.Point(15, 2);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(48, 37);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 1;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::Blood.Properties.Resources._492459_error_32x32;
+            this.pictureBox2.Location = new System.Drawing.Point(1361, 3);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(26, 36);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 0;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(81)))), ((int)(((byte)(82)))));
@@ -223,37 +257,19 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // pictureBox3
+            // Dashdoard
             // 
-            this.pictureBox3.Image = global::Blood.Properties.Resources._256_256_58063dcbb6764fcf4850dd7b8cb493cf_nurse;
-            this.pictureBox3.Location = new System.Drawing.Point(64, 3);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(48, 37);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 1;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::Blood.Properties.Resources._492459_error_32x32;
-            this.pictureBox2.Location = new System.Drawing.Point(1361, 3);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(26, 36);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 0;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
-            // 
-            // lname
-            // 
-            this.lname.AutoSize = true;
-            this.lname.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lname.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(99)))), ((int)(((byte)(99)))));
-            this.lname.Location = new System.Drawing.Point(118, 14);
-            this.lname.Name = "lname";
-            this.lname.Size = new System.Drawing.Size(21, 25);
-            this.lname.TabIndex = 62;
-            this.lname.Text = "-";
+            this.Dashdoard.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
+            this.Dashdoard.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
+            this.Dashdoard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Dashdoard.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Dashdoard.ForeColor = System.Drawing.SystemColors.Control;
+            this.Dashdoard.Location = new System.Drawing.Point(0, 33);
+            this.Dashdoard.Name = "Dashdoard";
+            this.Dashdoard.Size = new System.Drawing.Size(191, 47);
+            this.Dashdoard.TabIndex = 7;
+            this.Dashdoard.Text = "Dashdoard";
+            this.Dashdoard.UseVisualStyleBackColor = false;
             // 
             // Form1
             // 
@@ -269,11 +285,11 @@
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -296,6 +312,7 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label lname;
+        private System.Windows.Forms.Button Dashdoard;
     }
 }
 
