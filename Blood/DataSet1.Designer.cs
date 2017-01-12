@@ -7921,7 +7921,7 @@ SELECT DonorId, firstname, lastname, cin, datebirth, age, phone, city, sex, Adre
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "SELECT        MAX(DonorId)\r\nFROM            donor";
+            this._commandCollection[1].CommandText = "SELECT        MAX(DonorId) as MAXID\r\nFROM            donor";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
         }
         

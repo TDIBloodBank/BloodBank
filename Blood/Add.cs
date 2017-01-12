@@ -20,6 +20,7 @@ namespace Blood
 
         public void actu()
         {
+            //Need to check
             lid.DataBindings.Add("Text", b, "DonorId");
             tfname.DataBindings.Add("Text", b, "firstname");
             tlname.DataBindings.Add("Text", b, "lastname");
@@ -62,12 +63,17 @@ namespace Blood
 
         }
 
+        // To fill the Id Section
+        private void FillIdsection()
+        {
+            DataTable dt = d.GetDataBy();
+            int i = int.Parse(dt.Rows[0]["MAXID"].ToString())+1;
+            lid.Text = i.ToString();
+        }
+
         private void button6_Click(object sender, EventArgs e)
         {
-            int i;
-            DataTable data = d.GetDataBy();
-            i = int.Parse(data.ToString());
-            lid.Text = ++i +"";
+            FillIdsection();
             tfname.Text = "";
             tlname.Text = "";
             tcin.Text = "";

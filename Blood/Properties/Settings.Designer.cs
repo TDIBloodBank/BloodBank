@@ -26,7 +26,8 @@ namespace Blood.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-P3BMR31;Initial Catalog=BloodBank;Integrated Security=True")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=MOUADLAPTOP\\SQLEXPRESS;Initial Catalog=BloodBank;Integrated Security=" +
+            "True")]
         public string BloodBankConnectionString {
             get {
                 return ((string)(this["BloodBankConnectionString"]));
