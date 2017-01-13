@@ -29,10 +29,11 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource3 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource4 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.BloodBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.DataSet1 = new Blood.DataSet1();
+            this.DetailComBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -54,21 +55,20 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.reportViewer2 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.DetailComBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.DetailComTableAdapter = new Blood.DataSet1TableAdapters.DetailComTableAdapter();
             this.dataSet11 = new Blood.DataSet1();
             this.detailComBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.reportViewer2 = new Microsoft.Reporting.WinForms.ReportViewer();
             ((System.ComponentModel.ISupportInitialize)(this.BloodBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DetailComBindingSource)).BeginInit();
             this.panel4.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel11.SuspendLayout();
             this.panel15.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DetailComBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.detailComBindingSource1)).BeginInit();
             this.SuspendLayout();
@@ -82,6 +82,11 @@
             // 
             this.DataSet1.DataSetName = "DataSet1";
             this.DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // DetailComBindingSource
+            // 
+            this.DetailComBindingSource.DataMember = "DetailCom";
+            this.DetailComBindingSource.DataSource = this.DataSet1;
             // 
             // panel7
             // 
@@ -130,9 +135,9 @@
             // 
             // reportViewer1
             // 
-            reportDataSource3.Name = "DataSet1";
-            reportDataSource3.Value = this.BloodBindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource3);
+            reportDataSource1.Name = "DataSet1";
+            reportDataSource1.Value = this.BloodBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "Blood.ReportGroup.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(-77, -9);
             this.reportViewer1.Name = "reportViewer1";
@@ -150,18 +155,18 @@
             // panel10
             // 
             this.panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
-            this.panel10.Location = new System.Drawing.Point(24, 730);
+            this.panel10.Location = new System.Drawing.Point(12, 730);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(540, 10);
+            this.panel10.Size = new System.Drawing.Size(552, 10);
             this.panel10.TabIndex = 24;
             // 
             // panel11
             // 
             this.panel11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
             this.panel11.Controls.Add(this.label2);
-            this.panel11.Location = new System.Drawing.Point(12, 403);
+            this.panel11.Location = new System.Drawing.Point(1, 403);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(552, 41);
+            this.panel11.Size = new System.Drawing.Size(563, 41);
             this.panel11.TabIndex = 22;
             // 
             // label2
@@ -177,16 +182,16 @@
             // panel12
             // 
             this.panel12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(225)))), ((int)(((byte)(214)))));
-            this.panel12.Location = new System.Drawing.Point(12, 440);
+            this.panel12.Location = new System.Drawing.Point(1, 440);
             this.panel12.Margin = new System.Windows.Forms.Padding(6);
             this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(552, 290);
+            this.panel12.Size = new System.Drawing.Size(563, 290);
             this.panel12.TabIndex = 21;
             // 
             // panel13
             // 
             this.panel13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
-            this.panel13.Location = new System.Drawing.Point(1279, 420);
+            this.panel13.Location = new System.Drawing.Point(1291, 418);
             this.panel13.Name = "panel13";
             this.panel13.Size = new System.Drawing.Size(10, 320);
             this.panel13.TabIndex = 27;
@@ -194,18 +199,18 @@
             // panel14
             // 
             this.panel14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
-            this.panel14.Location = new System.Drawing.Point(739, 730);
+            this.panel14.Location = new System.Drawing.Point(704, 728);
             this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(540, 10);
+            this.panel14.Size = new System.Drawing.Size(587, 10);
             this.panel14.TabIndex = 28;
             // 
             // panel15
             // 
             this.panel15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
             this.panel15.Controls.Add(this.label3);
-            this.panel15.Location = new System.Drawing.Point(727, 403);
+            this.panel15.Location = new System.Drawing.Point(688, 401);
             this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(552, 41);
+            this.panel15.Size = new System.Drawing.Size(603, 41);
             this.panel15.TabIndex = 26;
             // 
             // label3
@@ -221,10 +226,10 @@
             // panel16
             // 
             this.panel16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(225)))), ((int)(((byte)(214)))));
-            this.panel16.Location = new System.Drawing.Point(727, 440);
+            this.panel16.Location = new System.Drawing.Point(688, 438);
             this.panel16.Margin = new System.Windows.Forms.Padding(6);
             this.panel16.Name = "panel16";
-            this.panel16.Size = new System.Drawing.Size(552, 290);
+            this.panel16.Size = new System.Drawing.Size(603, 290);
             this.panel16.TabIndex = 25;
             // 
             // BloodTableAdapter
@@ -268,6 +273,17 @@
             this.panel6.Size = new System.Drawing.Size(603, 281);
             this.panel6.TabIndex = 29;
             // 
+            // reportViewer2
+            // 
+            reportDataSource2.Name = "DataSet1";
+            reportDataSource2.Value = this.DetailComBindingSource;
+            this.reportViewer2.LocalReport.DataSources.Add(reportDataSource2);
+            this.reportViewer2.LocalReport.ReportEmbeddedResource = "Blood.ReportDC.rdlc";
+            this.reportViewer2.Location = new System.Drawing.Point(0, -2);
+            this.reportViewer2.Name = "reportViewer2";
+            this.reportViewer2.Size = new System.Drawing.Size(687, 284);
+            this.reportViewer2.TabIndex = 0;
+            // 
             // panel8
             // 
             this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
@@ -275,11 +291,6 @@
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(587, 10);
             this.panel8.TabIndex = 17;
-            // 
-            // DetailComBindingSource
-            // 
-            this.DetailComBindingSource.DataMember = "DetailCom";
-            this.DetailComBindingSource.DataSource = this.DataSet1;
             // 
             // DetailComTableAdapter
             // 
@@ -294,17 +305,6 @@
             // 
             this.detailComBindingSource1.DataMember = "DetailCom";
             this.detailComBindingSource1.DataSource = this.dataSet11;
-            // 
-            // reportViewer2
-            // 
-            reportDataSource4.Name = "DataSet1";
-            reportDataSource4.Value = this.DetailComBindingSource;
-            this.reportViewer2.LocalReport.DataSources.Add(reportDataSource4);
-            this.reportViewer2.LocalReport.ReportEmbeddedResource = "Blood.ReportDC.rdlc";
-            this.reportViewer2.Location = new System.Drawing.Point(0, -2);
-            this.reportViewer2.Name = "reportViewer2";
-            this.reportViewer2.Size = new System.Drawing.Size(687, 284);
-            this.reportViewer2.TabIndex = 0;
             // 
             // dashboard
             // 
@@ -335,6 +335,7 @@
             this.Load += new System.EventHandler(this.dashboard_Load);
             ((System.ComponentModel.ISupportInitialize)(this.BloodBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DetailComBindingSource)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -345,7 +346,6 @@
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             this.panel6.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.DetailComBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.detailComBindingSource1)).EndInit();
             this.ResumeLayout(false);

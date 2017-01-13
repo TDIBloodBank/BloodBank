@@ -14,9 +14,13 @@ namespace Blood
 {
     public partial class Add : Form
     {
+        public static int donorid;
+        public static string bloodgroup;
+
         BindingSource b = new BindingSource();
         donorTableAdapter d = new donorTableAdapter();
         DetaildonorTableAdapter dd = new DetaildonorTableAdapter();
+        Form1 F;
 
         public void actu()
         {
@@ -57,8 +61,21 @@ namespace Blood
         {
             d.Insert(tfname.Text, tlname.Text, tcin.Text, dob.Value, int.Parse(age.Text), phone.Text, tcity.Text, sex.Text, tadress.Text, int.Parse(cm.Text), int.Parse(kg.Text), tdis.Text, cbbg.Text, dod.Value, cbdb.Text);
             dd.Insert(dod.Value, int.Parse(lid.Text.ToString()));
+
+            //actu();
+
+
+
+            donorid = int.Parse(lid.Text);
+            bloodgroup = cbbg.Text;
+
+            Labo l = new Labo();
+
+            Labo.BloodG = bloodgroup;
+            Labo.ID = donorid;
             
-            actu();
+
+            F.call(l);
 
 
         }

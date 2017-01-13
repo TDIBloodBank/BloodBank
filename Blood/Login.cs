@@ -66,7 +66,7 @@ namespace Blood
 
       
         Form1 F;
-
+        public static string NurseName="";
         public Login(Form1 F)
         {
             InitializeComponent();
@@ -77,18 +77,29 @@ namespace Blood
 
         private void BCon_Click_1(object sender, EventArgs e)
         {
+            try
+            {
 
-            //DataTable dt = n.GetDataBy(int.Parse(tu.ToString()), tp.Text);
-            //MessageBox.Show(dt.Rows[0].ToString());
-            //DataTable LD = new NurseTableAdapter().GetDataBy(int.Parse(tu.ToString()),tp.Text);
+                List<DataSet1.NurseRow> LN = new NurseTableAdapter().GetData().ToList<DataSet1.NurseRow>();
 
-            //if (LD.Rows.Count != 0 )
-            //{
-            //  pictureBox4.Image = Properties.Resources.blood_2;
-                F.clear();
-            //}
+                foreach (DataSet1.NurseRow N in LN)
+                {
+                    if (N.id == int.Parse(tu.Text.ToString()) && N.password == tp.Text)
+                    {
+                        F.clear();
+                        NurseName = N.firstname + " " + N.lastname;
+                    }
+                }
+                Form1.Nurename = NurseName;
 
 
+
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("user id or password incorrect");
+                
+            }
         }
 
         private void tp_TextChanged(object sender, EventArgs e)

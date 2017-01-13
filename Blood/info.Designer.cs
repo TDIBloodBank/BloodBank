@@ -36,6 +36,7 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label25 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.lcheck = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -46,7 +47,7 @@
             this.label31 = new System.Windows.Forms.Label();
             this.label30 = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
-            this.label28 = new System.Windows.Forms.Label();
+            this.bg = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
             this.lsex = new System.Windows.Forms.Label();
@@ -57,7 +58,7 @@
             this.label20 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
+            this.lid = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
@@ -74,7 +75,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.donorTableAdapter = new Blood.DataSet1TableAdapters.donorTableAdapter();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label25 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.donorBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
             this.panel4.SuspendLayout();
@@ -146,7 +146,7 @@
             this.panel1.Controls.Add(this.label31);
             this.panel1.Controls.Add(this.label30);
             this.panel1.Controls.Add(this.label29);
-            this.panel1.Controls.Add(this.label28);
+            this.panel1.Controls.Add(this.bg);
             this.panel1.Controls.Add(this.label27);
             this.panel1.Controls.Add(this.label26);
             this.panel1.Controls.Add(this.lsex);
@@ -157,7 +157,7 @@
             this.panel1.Controls.Add(this.label20);
             this.panel1.Controls.Add(this.label19);
             this.panel1.Controls.Add(this.label15);
-            this.panel1.Controls.Add(this.label13);
+            this.panel1.Controls.Add(this.lid);
             this.panel1.Controls.Add(this.label18);
             this.panel1.Controls.Add(this.label10);
             this.panel1.Controls.Add(this.label11);
@@ -177,6 +177,16 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1109, 643);
             this.panel1.TabIndex = 13;
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(99)))), ((int)(((byte)(99)))));
+            this.label25.Location = new System.Drawing.Point(44, 36);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(140, 24);
+            this.label25.TabIndex = 67;
+            this.label25.Text = "Blood Group";
             // 
             // panel6
             // 
@@ -227,6 +237,7 @@
             this.savedata.TabIndex = 25;
             this.savedata.Text = "Give Blood";
             this.savedata.UseVisualStyleBackColor = false;
+            this.savedata.Click += new System.EventHandler(this.savedata_Click);
             // 
             // lcount
             // 
@@ -288,18 +299,18 @@
             this.label29.TabIndex = 60;
             this.label29.Text = "--------";
             // 
-            // label28
+            // bg
             // 
-            this.label28.AutoSize = true;
-            this.label28.DataBindings.Add(new System.Windows.Forms.Binding("Tag", this.donorBindingSource, "DonorId", true));
-            this.label28.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.donorBindingSource, "BloodGroup", true));
-            this.label28.Font = new System.Drawing.Font("Century Gothic", 120F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label28.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
-            this.label28.Location = new System.Drawing.Point(15, 36);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(360, 193);
-            this.label28.TabIndex = 59;
-            this.label28.Text = "AB-";
+            this.bg.AutoSize = true;
+            this.bg.DataBindings.Add(new System.Windows.Forms.Binding("Tag", this.donorBindingSource, "DonorId", true));
+            this.bg.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.donorBindingSource, "BloodGroup", true));
+            this.bg.Font = new System.Drawing.Font("Century Gothic", 120F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bg.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
+            this.bg.Location = new System.Drawing.Point(15, 36);
+            this.bg.Name = "bg";
+            this.bg.Size = new System.Drawing.Size(360, 193);
+            this.bg.TabIndex = 59;
+            this.bg.Text = "AB-";
             // 
             // label27
             // 
@@ -431,18 +442,18 @@
             this.label15.TabIndex = 49;
             this.label15.Text = "--------";
             // 
-            // label13
+            // lid
             // 
-            this.label13.AutoSize = true;
-            this.label13.DataBindings.Add(new System.Windows.Forms.Binding("Tag", this.donorBindingSource, "DonorId", true));
-            this.label13.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.donorBindingSource, "DonorId", true));
-            this.label13.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(99)))), ((int)(((byte)(99)))));
-            this.label13.Location = new System.Drawing.Point(429, 209);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(84, 25);
-            this.label13.TabIndex = 48;
-            this.label13.Text = "--------";
+            this.lid.AutoSize = true;
+            this.lid.DataBindings.Add(new System.Windows.Forms.Binding("Tag", this.donorBindingSource, "DonorId", true));
+            this.lid.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.donorBindingSource, "DonorId", true));
+            this.lid.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lid.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(99)))), ((int)(((byte)(99)))));
+            this.lid.Location = new System.Drawing.Point(429, 209);
+            this.lid.Name = "lid";
+            this.lid.Size = new System.Drawing.Size(84, 25);
+            this.lid.TabIndex = 48;
+            this.lid.Text = "--------";
             // 
             // label18
             // 
@@ -596,16 +607,6 @@
             this.panel2.Size = new System.Drawing.Size(10, 664);
             this.panel2.TabIndex = 16;
             // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(99)))), ((int)(((byte)(99)))));
-            this.label25.Location = new System.Drawing.Point(44, 36);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(140, 24);
-            this.label25.TabIndex = 67;
-            this.label25.Text = "Blood Group";
-            // 
             // info
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 24F);
@@ -662,7 +663,7 @@
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label lid;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
@@ -670,7 +671,7 @@
         private DataSet1 dataSet1;
         private System.Windows.Forms.BindingSource donorBindingSource;
         private DataSet1TableAdapters.donorTableAdapter donorTableAdapter;
-        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.Label bg;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label lcount;
         private System.Windows.Forms.Label label32;

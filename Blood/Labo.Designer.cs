@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label13 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -38,16 +39,21 @@
             this.bid = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.cbdid = new System.Windows.Forms.ComboBox();
+            cbdid = new System.Windows.Forms.ComboBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.cbbg = new System.Windows.Forms.ComboBox();
+            cbbg = new System.Windows.Forms.ComboBox();
             this.savedata = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.dataSet1 = new Blood.DataSet1();
+            this.donorBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.donorTableAdapter = new Blood.DataSet1TableAdapters.donorTableAdapter();
             this.panel5.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.donorBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panel5
@@ -79,9 +85,9 @@
             this.panel2.Controls.Add(this.bid);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.label1);
-            this.panel2.Controls.Add(this.cbdid);
+            this.panel2.Controls.Add(cbdid);
             this.panel2.Controls.Add(this.label14);
-            this.panel2.Controls.Add(this.cbbg);
+            this.panel2.Controls.Add(cbbg);
             this.panel2.Location = new System.Drawing.Point(104, 96);
             this.panel2.Margin = new System.Windows.Forms.Padding(6);
             this.panel2.Name = "panel2";
@@ -162,13 +168,15 @@
             // 
             // cbdid
             // 
-            this.cbdid.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbdid.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(99)))), ((int)(((byte)(99)))));
-            this.cbdid.FormattingEnabled = true;
-            this.cbdid.Location = new System.Drawing.Point(210, 92);
-            this.cbdid.Name = "cbdid";
-            this.cbdid.Size = new System.Drawing.Size(292, 32);
-            this.cbdid.TabIndex = 32;
+            cbdid.DataBindings.Add(new System.Windows.Forms.Binding("SelectedItem", this.donorBindingSource, "firstname", true));
+            cbdid.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.donorBindingSource, "DonorId", true));
+            cbdid.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            cbdid.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(99)))), ((int)(((byte)(99)))));
+            cbdid.FormattingEnabled = true;
+            cbdid.Location = new System.Drawing.Point(210, 92);
+            cbdid.Name = "cbdid";
+            cbdid.Size = new System.Drawing.Size(292, 32);
+            cbdid.TabIndex = 32;
             // 
             // label14
             // 
@@ -182,10 +190,10 @@
             // 
             // cbbg
             // 
-            this.cbbg.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbbg.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(99)))), ((int)(((byte)(99)))));
-            this.cbbg.FormattingEnabled = true;
-            this.cbbg.Items.AddRange(new object[] {
+            cbbg.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            cbbg.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(99)))), ((int)(((byte)(99)))));
+            cbbg.FormattingEnabled = true;
+            cbbg.Items.AddRange(new object[] {
             "A-",
             "A+",
             "AB-",
@@ -194,10 +202,10 @@
             "B+",
             "O-",
             "O+"});
-            this.cbbg.Location = new System.Drawing.Point(617, 92);
-            this.cbbg.Name = "cbbg";
-            this.cbbg.Size = new System.Drawing.Size(292, 32);
-            this.cbbg.TabIndex = 24;
+            cbbg.Location = new System.Drawing.Point(617, 92);
+            cbbg.Name = "cbbg";
+            cbbg.Size = new System.Drawing.Size(292, 32);
+            cbbg.TabIndex = 24;
             // 
             // savedata
             // 
@@ -245,6 +253,20 @@
             this.panel6.Size = new System.Drawing.Size(175, 6);
             this.panel6.TabIndex = 11;
             // 
+            // dataSet1
+            // 
+            this.dataSet1.DataSetName = "DataSet1";
+            this.dataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // donorBindingSource
+            // 
+            this.donorBindingSource.DataMember = "donor";
+            this.donorBindingSource.DataSource = this.dataSet1;
+            // 
+            // donorTableAdapter
+            // 
+            this.donorTableAdapter.ClearBeforeFill = true;
+            // 
             // Labo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 24F);
@@ -267,6 +289,8 @@
             this.panel5.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.donorBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -277,7 +301,7 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.ComboBox cbbg;
+        private static System.Windows.Forms.ComboBox cbbg;
         private System.Windows.Forms.TextBox tstatus;
         private System.Windows.Forms.Label Statu;
         private System.Windows.Forms.Label label18;
@@ -285,11 +309,14 @@
         private System.Windows.Forms.TextBox bid;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox cbdid;
+        private static System.Windows.Forms.ComboBox cbdid;
         private System.Windows.Forms.Button savedata;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel6;
+        private DataSet1 dataSet1;
+        private System.Windows.Forms.BindingSource donorBindingSource;
+        private DataSet1TableAdapters.donorTableAdapter donorTableAdapter;
     }
 }

@@ -17,6 +17,9 @@ namespace Blood
 
         LaboTableAdapter l = new LaboTableAdapter();
         donorTableAdapter d = new donorTableAdapter();
+        public static int ID { set { cbdid.SelectedValue =value; } }
+        public static string BloodG { set { cbbg.Text = value.ToString(); } }
+
 
         public Labo()
         {
@@ -24,9 +27,10 @@ namespace Blood
         }
 
 
-
         private void Labo_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'dataSet1.donor' table. You can move, or remove it, as needed.
+            this.donorTableAdapter.Fill(this.dataSet1.donor);
             foreach (DataRow r in d.GetData())
             {
                 cbdid.Items.Add( r[0].ToString());
