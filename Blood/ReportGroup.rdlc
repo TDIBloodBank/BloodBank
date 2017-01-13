@@ -8,32 +8,42 @@
             <ChartMember>
               <Group Name="Chart1_CategoryGroup">
                 <GroupExpressions>
-                  <GroupExpression>=Fields!firstname.Value</GroupExpression>
+                  <GroupExpression>=Fields!BloodGroup.Value</GroupExpression>
                 </GroupExpressions>
               </Group>
               <SortExpressions>
                 <SortExpression>
-                  <Value>=Fields!firstname.Value</Value>
+                  <Value>=Fields!BloodGroup.Value</Value>
                 </SortExpression>
               </SortExpressions>
-              <Label>=Fields!firstname.Value</Label>
+              <Label>=Fields!BloodGroup.Value</Label>
             </ChartMember>
           </ChartMembers>
         </ChartCategoryHierarchy>
         <ChartSeriesHierarchy>
           <ChartMembers>
             <ChartMember>
-              <Label>age</Label>
+              <Group Name="Chart1_SeriesGroup">
+                <GroupExpressions>
+                  <GroupExpression>=Fields!qstock.Value</GroupExpression>
+                </GroupExpressions>
+              </Group>
+              <SortExpressions>
+                <SortExpression>
+                  <Value>=Fields!qstock.Value</Value>
+                </SortExpression>
+              </SortExpressions>
+              <Label>=Fields!qstock.Value</Label>
             </ChartMember>
           </ChartMembers>
         </ChartSeriesHierarchy>
         <ChartData>
           <ChartSeriesCollection>
-            <ChartSeries Name="age">
+            <ChartSeries Name="qstock">
               <ChartDataPoints>
                 <ChartDataPoint>
                   <ChartDataPointValues>
-                    <Y>=Sum(Fields!age.Value)</Y>
+                    <Y>=Sum(Fields!qstock.Value)</Y>
                   </ChartDataPointValues>
                   <ChartDataLabel>
                     <Style />
@@ -45,6 +55,8 @@
                   <DataElementOutput>Output</DataElementOutput>
                 </ChartDataPoint>
               </ChartDataPoints>
+              <Type>Shape</Type>
+              <Subtype>ExplodedPie</Subtype>
               <Style />
               <ChartEmptyPoints>
                 <Style />
@@ -214,6 +226,9 @@
                 </ChartAxisScaleBreak>
               </ChartAxis>
             </ChartValueAxes>
+            <ChartThreeDProperties>
+              <Enabled>true</Enabled>
+            </ChartThreeDProperties>
             <Style>
               <BackgroundGradientType>None</BackgroundGradientType>
             </Style>
@@ -225,8 +240,9 @@
               <BackgroundGradientType>None</BackgroundGradientType>
               <FontSize>8pt</FontSize>
             </Style>
+            <DockOutsideChartArea>true</DockOutsideChartArea>
             <ChartLegendTitle>
-              <Caption />
+              <Caption>stoke Quantity</Caption>
               <Style>
                 <FontSize>8pt</FontSize>
                 <FontWeight>Bold</FontWeight>
@@ -237,17 +253,6 @@
             <ColumnSeparatorColor>Black</ColumnSeparatorColor>
           </ChartLegend>
         </ChartLegends>
-        <ChartTitles>
-          <ChartTitle Name="Default">
-            <Caption>Chart Title</Caption>
-            <Style>
-              <BackgroundGradientType>None</BackgroundGradientType>
-              <FontWeight>Bold</FontWeight>
-              <TextAlign>General</TextAlign>
-              <VerticalAlign>Top</VerticalAlign>
-            </Style>
-          </ChartTitle>
-        </ChartTitles>
         <Palette>BrightPastel</Palette>
         <ChartBorderSkin>
           <Style>
@@ -265,10 +270,9 @@
           </Style>
         </ChartNoDataMessage>
         <DataSetName>DataSet1</DataSetName>
-        <Top>2.09021cm</Top>
-        <Left>7.00828cm</Left>
-        <Height>2.19224cm</Height>
-        <Width>4.61604cm</Width>
+        <Top>0.50271cm</Top>
+        <Height>6.53141cm</Height>
+        <Width>16.51cm</Width>
         <Style>
           <Border>
             <Color>LightGrey</Color>
@@ -279,10 +283,10 @@
         </Style>
       </Chart>
     </ReportItems>
-    <Height>2.57142in</Height>
+    <Height>2.76934in</Height>
     <Style />
   </Body>
-  <Width>8.0031in</Width>
+  <Width>6.5in</Width>
   <Page>
     <PageHeight>29.7cm</PageHeight>
     <PageWidth>21cm</PageWidth>
@@ -300,7 +304,7 @@
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
-      <rd:DataSourceID>6e345204-3928-40e2-baf6-84cccb8ed0c7</rd:DataSourceID>
+      <rd:DataSourceID>f076e7d1-e60b-418c-bfce-502930ecc4be</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>
@@ -310,81 +314,29 @@
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
-        <Field Name="DonorId">
-          <DataField>DonorId</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="firstname">
-          <DataField>firstname</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="lastname">
-          <DataField>lastname</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="cin">
-          <DataField>cin</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="datebirth">
-          <DataField>datebirth</DataField>
-          <rd:TypeName>System.DateTime</rd:TypeName>
-        </Field>
-        <Field Name="age">
-          <DataField>age</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="phone">
-          <DataField>phone</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="city">
-          <DataField>city</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="sex">
-          <DataField>sex</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="Adress">
-          <DataField>Adress</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="Height">
-          <DataField>Height</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="Dweight">
-          <DataField>Dweight</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="diseases">
-          <DataField>diseases</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
         <Field Name="BloodGroup">
           <DataField>BloodGroup</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="datedonation">
-          <DataField>datedonation</DataField>
-          <rd:TypeName>System.DateTime</rd:TypeName>
+        <Field Name="pu">
+          <DataField>pu</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
         </Field>
-        <Field Name="donotedBefor">
-          <DataField>donotedBefor</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
+        <Field Name="qstock">
+          <DataField>qstock</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>DataSet1</rd:DataSetName>
         <rd:SchemaPath>C:\Users\Joker\Source\Repos\BloodBank\Blood\DataSet1.xsd</rd:SchemaPath>
-        <rd:TableName>donor</rd:TableName>
+        <rd:TableName>Blood</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
-        <rd:TableAdapterName>donorTableAdapter</rd:TableAdapterName>
+        <rd:TableAdapterName>BloodTableAdapter</rd:TableAdapterName>
       </rd:DataSetInfo>
     </DataSet>
   </DataSets>
   <rd:ReportUnitType>Cm</rd:ReportUnitType>
-  <rd:ReportID>187f9644-b987-4773-861f-c8c59ba5a5d9</rd:ReportID>
+  <rd:ReportID>5b882734-edee-4888-a113-06f047e1a122</rd:ReportID>
 </Report>

@@ -107,5 +107,16 @@ namespace Blood
         {
             Application.Exit();
         }
+
+        private void Dashdoard_Click(object sender, EventArgs e)
+        {
+            dashboard d = new dashboard();
+            call(d);
+        }
+
+        private void Mini_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
     }
 }

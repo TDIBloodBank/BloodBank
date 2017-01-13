@@ -46,6 +46,8 @@
             this.panel6 = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lid = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.hospitalBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -77,8 +79,9 @@
             this.panel16 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.commandeTableAdapter = new Blood.DataSet1TableAdapters.CommandeTableAdapter();
-            this.lid = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.panel17 = new System.Windows.Forms.Panel();
+            this.panel18 = new System.Windows.Forms.Panel();
+            this.getcom = new System.Windows.Forms.Button();
             this.panel4.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -131,6 +134,9 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(225)))), ((int)(((byte)(214)))));
+            this.panel1.Controls.Add(this.panel17);
+            this.panel1.Controls.Add(this.panel18);
+            this.panel1.Controls.Add(this.getcom);
             this.panel1.Controls.Add(this.ltotal);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.dataGridView1);
@@ -145,7 +151,7 @@
             this.ltotal.AutoSize = true;
             this.ltotal.Font = new System.Drawing.Font("Century Gothic", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ltotal.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.ltotal.Location = new System.Drawing.Point(982, 235);
+            this.ltotal.Location = new System.Drawing.Point(982, 45);
             this.ltotal.Name = "ltotal";
             this.ltotal.Size = new System.Drawing.Size(80, 40);
             this.ltotal.TabIndex = 39;
@@ -155,7 +161,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(99)))), ((int)(((byte)(99)))));
-            this.label1.Location = new System.Drawing.Point(985, 215);
+            this.label1.Location = new System.Drawing.Point(985, 25);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(58, 24);
             this.label1.TabIndex = 36;
@@ -250,6 +256,28 @@
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(542, 251);
             this.panel8.TabIndex = 17;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label2.Location = new System.Drawing.Point(119, 48);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(41, 19);
+            this.label2.TabIndex = 56;
+            this.label2.Text = "Num";
+            // 
+            // lid
+            // 
+            this.lid.AutoSize = true;
+            this.lid.Font = new System.Drawing.Font("Century Gothic", 40F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lid.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(99)))), ((int)(((byte)(99)))));
+            this.lid.Location = new System.Drawing.Point(147, 9);
+            this.lid.Name = "lid";
+            this.lid.Size = new System.Drawing.Size(58, 64);
+            this.lid.TabIndex = 55;
+            this.lid.Text = "6";
             // 
             // label11
             // 
@@ -540,27 +568,35 @@
             // 
             this.commandeTableAdapter.ClearBeforeFill = true;
             // 
-            // lid
+            // panel17
             // 
-            this.lid.AutoSize = true;
-            this.lid.Font = new System.Drawing.Font("Century Gothic", 40F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lid.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(99)))), ((int)(((byte)(99)))));
-            this.lid.Location = new System.Drawing.Point(147, 9);
-            this.lid.Name = "lid";
-            this.lid.Size = new System.Drawing.Size(58, 64);
-            this.lid.TabIndex = 55;
-            this.lid.Text = "6";
+            this.panel17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
+            this.panel17.Location = new System.Drawing.Point(989, 275);
+            this.panel17.Name = "panel17";
+            this.panel17.Size = new System.Drawing.Size(120, 7);
+            this.panel17.TabIndex = 42;
             // 
-            // label2
+            // panel18
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label2.Location = new System.Drawing.Point(119, 48);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(41, 19);
-            this.label2.TabIndex = 56;
-            this.label2.Text = "Num";
+            this.panel18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
+            this.panel18.Location = new System.Drawing.Point(1109, 242);
+            this.panel18.Name = "panel18";
+            this.panel18.Size = new System.Drawing.Size(7, 40);
+            this.panel18.TabIndex = 41;
+            // 
+            // getcom
+            // 
+            this.getcom.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
+            this.getcom.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
+            this.getcom.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.getcom.ForeColor = System.Drawing.Color.White;
+            this.getcom.Location = new System.Drawing.Point(982, 235);
+            this.getcom.Name = "getcom";
+            this.getcom.Size = new System.Drawing.Size(127, 40);
+            this.getcom.TabIndex = 40;
+            this.getcom.Text = "GO";
+            this.getcom.UseVisualStyleBackColor = false;
+            this.getcom.Click += new System.EventHandler(this.getcom_Click);
             // 
             // command
             // 
@@ -665,5 +701,8 @@
         private System.Windows.Forms.Label ltotal;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lid;
+        private System.Windows.Forms.Panel panel17;
+        private System.Windows.Forms.Panel panel18;
+        private System.Windows.Forms.Button getcom;
     }
 }

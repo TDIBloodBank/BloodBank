@@ -13,6 +13,7 @@ namespace Blood
 {
     public partial class Login : Form
     {
+        NurseTableAdapter n = new NurseTableAdapter();
 
 
         public void WM()
@@ -73,15 +74,21 @@ namespace Blood
             this.F = F;
         }
 
-        NurseTableAdapter n = new NurseTableAdapter();
-
-
 
         private void BCon_Click_1(object sender, EventArgs e)
         {
-            
-            pictureBox4.Image = Properties.Resources.blood_2;
-            F.clear();
+
+            //DataTable dt = n.GetDataBy(int.Parse(tu.ToString()), tp.Text);
+            //MessageBox.Show(dt.Rows[0].ToString());
+            //DataTable LD = new NurseTableAdapter().GetDataBy(int.Parse(tu.ToString()),tp.Text);
+
+            //if (LD.Rows.Count != 0 )
+            //{
+            //  pictureBox4.Image = Properties.Resources.blood_2;
+                F.clear();
+            //}
+
+
         }
 
         private void tp_TextChanged(object sender, EventArgs e)

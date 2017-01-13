@@ -115,5 +115,24 @@ namespace Blood
             }
 
         }
+
+        private void getcom_Click(object sender, EventArgs e)
+        {
+            new CommandeTableAdapter().Insert(dateTimePicker1.Value, int.Parse(comboBox1.SelectedValue.ToString()));
+            DataSet1.BloodRow BR;
+            foreach (DataGridViewRow row in dataGridView1.Rows)
+            {
+                BR = new BloodTableAdapter().GetData().FindByBloodGroup(row.Cells[0].Value.ToString());
+                BR.qstock -= int.Parse(row.Cells[2].Value.ToString());
+                new BloodTableAdapter().Update(BR);
+                new DetailComTableAdapter().Insert(int.Parse(lid.Text.ToString()), row.Cells[0].Value.ToString(), int.Parse(row.Cells[2].Value.ToString()));
+
+            }
+
+
+
+
+        }
+    
     }
 }
