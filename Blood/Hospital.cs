@@ -21,9 +21,17 @@ namespace Blood
         }
         private void FillIdsection()
         {
-            DataTable dt = h.GetDataBy();
-            int i = int.Parse(dt.Rows[0]["MAXID"].ToString()) + 1;
-            lid.Text = i.ToString();
+            try
+            {
+                DataTable dt = h.GetDataBy();
+                int i = int.Parse(dt.Rows[0]["MAXID"].ToString()) + 1;
+                lid.Text = i.ToString();
+            }
+            catch (Exception)
+            {
+
+                lid.Text = "1";
+            }
         }
 
         private void savedata_Click(object sender, EventArgs e)
