@@ -37,17 +37,9 @@ namespace Blood
 
         private void FillIdsection()
         {
-            try
-            {
-                DataTable dt = c.GetDataBy();
-                int i = int.Parse(dt.Rows[0]["MAXID"].ToString()) + 1;
-                lid.Text = i.ToString();
-            }
-            catch (Exception)
-            {
-
-                lid.Text = "1";
-            }
+            DataTable dt = c.GetDataBy();
+            int i = int.Parse(dt.Rows[0]["MAXID"].ToString()) + 1;
+            lid.Text = i.ToString();
         }
 
         private void textBox4_TextChanged(object sender, EventArgs e)
@@ -124,17 +116,23 @@ namespace Blood
 
         }
 
-        private void ValidateCmd_Click(object sender, EventArgs e)
+        private void getcom_Click(object sender, EventArgs e)
         {
+            new CommandeTableAdapter().Insert(dateTimePicker1.Value, int.Parse(comboBox1.SelectedValue.ToString()));
             DataSet1.BloodRow BR;
             foreach (DataGridViewRow row in dataGridView1.Rows)
             {
                 BR = new BloodTableAdapter().GetData().FindByBloodGroup(row.Cells[0].Value.ToString());
                 BR.qstock -= int.Parse(row.Cells[2].Value.ToString());
                 new BloodTableAdapter().Update(BR);
-                new DetailComTableAdapter().Insert(lid.Text, cbbj.Text, nudq.Value);
+                new DetailComTableAdapter().Insert(int.Parse(lid.Text.ToString()), row.Cells[0].Value.ToString(), int.Parse(row.Cells[2].Value.ToString()));
+
             }
-            
+
+
+
+
         }
+    
     }
 }

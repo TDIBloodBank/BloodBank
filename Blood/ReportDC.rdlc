@@ -8,32 +8,47 @@
             <ChartMember>
               <Group Name="Chart1_CategoryGroup">
                 <GroupExpressions>
-                  <GroupExpression>=Fields!firstname.Value</GroupExpression>
+                  <GroupExpression>=Fields!Bloodgroup.Value</GroupExpression>
                 </GroupExpressions>
               </Group>
               <SortExpressions>
                 <SortExpression>
-                  <Value>=Fields!firstname.Value</Value>
+                  <Value>=Fields!Bloodgroup.Value</Value>
                 </SortExpression>
               </SortExpressions>
-              <Label>=Fields!firstname.Value</Label>
+              <ChartMembers>
+                <ChartMember>
+                  <Group Name="Chart1_CategoryGroup1">
+                    <GroupExpressions>
+                      <GroupExpression>=Fields!NumCom.Value</GroupExpression>
+                    </GroupExpressions>
+                  </Group>
+                  <SortExpressions>
+                    <SortExpression>
+                      <Value>=Fields!NumCom.Value</Value>
+                    </SortExpression>
+                  </SortExpressions>
+                  <Label>=Fields!NumCom.Value</Label>
+                </ChartMember>
+              </ChartMembers>
+              <Label>=Fields!Bloodgroup.Value</Label>
             </ChartMember>
           </ChartMembers>
         </ChartCategoryHierarchy>
         <ChartSeriesHierarchy>
           <ChartMembers>
             <ChartMember>
-              <Label>age</Label>
+              <Label>Qte</Label>
             </ChartMember>
           </ChartMembers>
         </ChartSeriesHierarchy>
         <ChartData>
           <ChartSeriesCollection>
-            <ChartSeries Name="age">
+            <ChartSeries Name="Qte">
               <ChartDataPoints>
                 <ChartDataPoint>
                   <ChartDataPointValues>
-                    <Y>=Sum(Fields!age.Value)</Y>
+                    <Y>=Max(Fields!Qte.Value)</Y>
                   </ChartDataPointValues>
                   <ChartDataLabel>
                     <Style />
@@ -237,17 +252,6 @@
             <ColumnSeparatorColor>Black</ColumnSeparatorColor>
           </ChartLegend>
         </ChartLegends>
-        <ChartTitles>
-          <ChartTitle Name="Default">
-            <Caption>Chart Title</Caption>
-            <Style>
-              <BackgroundGradientType>None</BackgroundGradientType>
-              <FontWeight>Bold</FontWeight>
-              <TextAlign>General</TextAlign>
-              <VerticalAlign>Top</VerticalAlign>
-            </Style>
-          </ChartTitle>
-        </ChartTitles>
         <Palette>BrightPastel</Palette>
         <ChartBorderSkin>
           <Style>
@@ -265,10 +269,9 @@
           </Style>
         </ChartNoDataMessage>
         <DataSetName>DataSet1</DataSetName>
-        <Top>2.09021cm</Top>
-        <Left>7.00828cm</Left>
-        <Height>2.19224cm</Height>
-        <Width>4.61604cm</Width>
+        <Top>0.34396cm</Top>
+        <Height>6.45203cm</Height>
+        <Width>16.51cm</Width>
         <Style>
           <Border>
             <Color>LightGrey</Color>
@@ -279,10 +282,10 @@
         </Style>
       </Chart>
     </ReportItems>
-    <Height>2.57142in</Height>
+    <Height>2.67559in</Height>
     <Style />
   </Body>
-  <Width>8.0031in</Width>
+  <Width>6.5in</Width>
   <Page>
     <PageHeight>29.7cm</PageHeight>
     <PageWidth>21cm</PageWidth>
@@ -300,7 +303,7 @@
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
-      <rd:DataSourceID>6e345204-3928-40e2-baf6-84cccb8ed0c7</rd:DataSourceID>
+      <rd:DataSourceID>9c1f7132-6400-46e1-af21-bb72b860fde1</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>
@@ -310,81 +313,29 @@
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
-        <Field Name="DonorId">
-          <DataField>DonorId</DataField>
+        <Field Name="NumCom">
+          <DataField>NumCom</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
-        <Field Name="firstname">
-          <DataField>firstname</DataField>
+        <Field Name="Bloodgroup">
+          <DataField>Bloodgroup</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="lastname">
-          <DataField>lastname</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="cin">
-          <DataField>cin</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="datebirth">
-          <DataField>datebirth</DataField>
-          <rd:TypeName>System.DateTime</rd:TypeName>
-        </Field>
-        <Field Name="age">
-          <DataField>age</DataField>
+        <Field Name="Qte">
+          <DataField>Qte</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="phone">
-          <DataField>phone</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="city">
-          <DataField>city</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="sex">
-          <DataField>sex</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="Adress">
-          <DataField>Adress</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="Height">
-          <DataField>Height</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="Dweight">
-          <DataField>Dweight</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="diseases">
-          <DataField>diseases</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="BloodGroup">
-          <DataField>BloodGroup</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="datedonation">
-          <DataField>datedonation</DataField>
-          <rd:TypeName>System.DateTime</rd:TypeName>
-        </Field>
-        <Field Name="donotedBefor">
-          <DataField>donotedBefor</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
         </Field>
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>DataSet1</rd:DataSetName>
         <rd:SchemaPath>C:\Users\Joker\Source\Repos\BloodBank\Blood\DataSet1.xsd</rd:SchemaPath>
-        <rd:TableName>donor</rd:TableName>
+        <rd:TableName>DetailCom</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
-        <rd:TableAdapterName>donorTableAdapter</rd:TableAdapterName>
+        <rd:TableAdapterName>DetailComTableAdapter</rd:TableAdapterName>
       </rd:DataSetInfo>
     </DataSet>
   </DataSets>
   <rd:ReportUnitType>Cm</rd:ReportUnitType>
-  <rd:ReportID>187f9644-b987-4773-861f-c8c59ba5a5d9</rd:ReportID>
+  <rd:ReportID>b8dfc1f3-a335-4301-8295-b71a25781e87</rd:ReportID>
 </Report>

@@ -33,8 +33,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.ReportViewer.Common, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -57,6 +63,12 @@
     </Compile>
     <Compile Include="command.Designer.cs">
       <DependentUpon>command.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CR1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CR1.rpt</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="dashboard.cs">
       <SubType>Form</SubType>
@@ -128,6 +140,10 @@
     <EmbeddedResource Include="command.resx">
       <DependentUpon>command.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CR1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CR1.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="dashboard.resx">
       <DependentUpon>dashboard.cs</DependentUpon>
     </EmbeddedResource>
@@ -160,6 +176,8 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="repcer.rdlc" />
+    <EmbeddedResource Include="ReportDC.rdlc" />
+    <EmbeddedResource Include="ReportGroup.rdlc" />
     <EmbeddedResource Include="stock.resx">
       <DependentUpon>stock.cs</DependentUpon>
     </EmbeddedResource>
@@ -231,6 +249,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\b1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minimize-window-xxl.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

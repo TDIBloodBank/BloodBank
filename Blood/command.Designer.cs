@@ -81,7 +81,7 @@
             this.commandeTableAdapter = new Blood.DataSet1TableAdapters.CommandeTableAdapter();
             this.panel17 = new System.Windows.Forms.Panel();
             this.panel18 = new System.Windows.Forms.Panel();
-            this.ValidateCmd = new System.Windows.Forms.Button();
+            this.getcom = new System.Windows.Forms.Button();
             this.panel4.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -136,7 +136,7 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(225)))), ((int)(((byte)(214)))));
             this.panel1.Controls.Add(this.panel17);
             this.panel1.Controls.Add(this.panel18);
-            this.panel1.Controls.Add(this.ValidateCmd);
+            this.panel1.Controls.Add(this.getcom);
             this.panel1.Controls.Add(this.ltotal);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.dataGridView1);
@@ -151,7 +151,7 @@
             this.ltotal.AutoSize = true;
             this.ltotal.Font = new System.Drawing.Font("Century Gothic", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ltotal.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.ltotal.Location = new System.Drawing.Point(982, 235);
+            this.ltotal.Location = new System.Drawing.Point(982, 45);
             this.ltotal.Name = "ltotal";
             this.ltotal.Size = new System.Drawing.Size(80, 40);
             this.ltotal.TabIndex = 39;
@@ -161,7 +161,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(99)))), ((int)(((byte)(99)))));
-            this.label1.Location = new System.Drawing.Point(985, 215);
+            this.label1.Location = new System.Drawing.Point(985, 25);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(58, 24);
             this.label1.TabIndex = 36;
@@ -571,32 +571,32 @@
             // panel17
             // 
             this.panel17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
-            this.panel17.Location = new System.Drawing.Point(1002, 138);
+            this.panel17.Location = new System.Drawing.Point(989, 275);
             this.panel17.Name = "panel17";
-            this.panel17.Size = new System.Drawing.Size(153, 7);
+            this.panel17.Size = new System.Drawing.Size(120, 7);
             this.panel17.TabIndex = 42;
             // 
             // panel18
             // 
             this.panel18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
-            this.panel18.Location = new System.Drawing.Point(1149, 104);
+            this.panel18.Location = new System.Drawing.Point(1109, 242);
             this.panel18.Name = "panel18";
             this.panel18.Size = new System.Drawing.Size(7, 40);
             this.panel18.TabIndex = 41;
             // 
-            // ValidateCmd
+            // getcom
             // 
-            this.ValidateCmd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
-            this.ValidateCmd.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
-            this.ValidateCmd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ValidateCmd.ForeColor = System.Drawing.Color.White;
-            this.ValidateCmd.Location = new System.Drawing.Point(989, 97);
-            this.ValidateCmd.Name = "ValidateCmd";
-            this.ValidateCmd.Size = new System.Drawing.Size(160, 40);
-            this.ValidateCmd.TabIndex = 40;
-            this.ValidateCmd.Text = "Validate";
-            this.ValidateCmd.UseVisualStyleBackColor = false;
-            this.ValidateCmd.Click += new System.EventHandler(this.ValidateCmd_Click);
+            this.getcom.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
+            this.getcom.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
+            this.getcom.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.getcom.ForeColor = System.Drawing.Color.White;
+            this.getcom.Location = new System.Drawing.Point(982, 235);
+            this.getcom.Name = "getcom";
+            this.getcom.Size = new System.Drawing.Size(127, 40);
+            this.getcom.TabIndex = 40;
+            this.getcom.Text = "GO";
+            this.getcom.UseVisualStyleBackColor = false;
+            this.getcom.Click += new System.EventHandler(this.getcom_Click);
             // 
             // command
             // 
@@ -703,6 +703,6 @@
         private System.Windows.Forms.Label lid;
         private System.Windows.Forms.Panel panel17;
         private System.Windows.Forms.Panel panel18;
-        private System.Windows.Forms.Button ValidateCmd;
+        private System.Windows.Forms.Button getcom;
     }
 }
