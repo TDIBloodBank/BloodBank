@@ -13,6 +13,7 @@ namespace Blood
 {
     public partial class info : Form
     {
+        Form1 F;
         public info()
         {
             InitializeComponent();
@@ -35,7 +36,7 @@ namespace Blood
                 int id = int.Parse(comboBox1.SelectedValue.ToString());
                 var LastDate = new DetaildonorTableAdapter().MaxDate(id);
 
-                if ((((DateTime)LastDate - DateTime.Now).Days > 90 && lsex.Text == "Male") || (((DateTime)LastDate - DateTime.Now).Days > 120 && lsex.Text == "Female"))
+                if (((DateTime.Now - (DateTime)LastDate).Days > 90 && lsex.Text == "Male") || (((DateTime.Now - (DateTime)LastDate).Days > 120 && lsex.Text == "Female")))
                 {
                     lcheck.Text = "Possible";
                     lcheck.ForeColor = Color.Green;
@@ -54,6 +55,20 @@ namespace Blood
 
             }
 
+        }
+
+        private void savedata_Click(object sender, EventArgs e)
+        {
+            int donorid = int.Parse(lid.Text);
+            string bloodgroup = bg.Text;
+
+            Labo l = new Labo();
+
+            Labo.BloodG = bloodgroup;
+            Labo.ID = donorid;
+
+
+            //F.call(l);
         }
     }
 }

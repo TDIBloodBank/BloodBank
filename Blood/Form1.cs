@@ -12,6 +12,8 @@ namespace Blood
 {
     public partial class Form1 : Form
     {
+        public static string Nurename { set { lname.Text = value.ToString(); } }
+
         public Form1()
         {
             InitializeComponent();
@@ -112,11 +114,18 @@ namespace Blood
         {
             dashboard d = new dashboard();
             call(d);
+
         }
 
         private void Mini_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Labo l = new Labo();
+            call(l);
         }
     }
 }
